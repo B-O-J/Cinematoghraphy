@@ -217,7 +217,7 @@ footer {
 
 /* PORTFOLIO */
 
-.portfolio-grid {
+/*.portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
@@ -225,9 +225,9 @@ footer {
 }
 
 .project {
-   /* background: #1a1a1a;
+    background: #1a1a1a;
     padding: 60px;
-    transition: 0.3s;*/
+    transition: 0.3s;
 		background: rgba(10, 10, 30, 0.6);
     padding: 60px;
     border-radius: 15px;
@@ -235,9 +235,88 @@ footer {
 }
 
 .project:hover {
-    /*transform: scale(1.05);*/
+    /*transform: scale(1.05);
 		transform: scale(1.05);
     box-shadow: 0 0 20px rgba(255, 77, 141, 0.5);
+}
+*/
+/* PORTFOLIO HERO */
+.portfolio-hero {
+    padding-top: 150px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+.portfolio-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.portfolio-hero p {
+    color: #ccc;
+}
+
+/* SECTION STYLING */
+.portfolio-section {
+    padding: 80px 8%;
+}
+
+.portfolio-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* GRID */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* ITEM */
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: 0.5s ease;
+}
+
+/* OVERLAY */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    padding: 30px;
+    color: white;
+    opacity: 0;
+    transition: 0.4s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-item:hover .overlay {
+    opacity: 1;
+}
+
+/* CTA */
+.portfolio-cta {
+    text-align: center;
+    padding: 100px 8%;
+}
+
+.portfolio-cta h2 {
+    margin-bottom: 20px;
 }
 
 /* CONTACT */
