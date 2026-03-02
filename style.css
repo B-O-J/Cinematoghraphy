@@ -140,7 +140,7 @@ section {
 
 /* Controls video width */
 .video-container {
-    position: absolute;
+    position: relative;
     width: 90%;
     max-width: 1000px;
     padding-bottom: 56.25%;
@@ -151,9 +151,12 @@ section {
 
 .video-container iframe {
 		position: absolute;
+		top: 0;
+		left: 0;
     width: 100%;
     height: 100%;
     border-radius: 15px;
+		border: none;
 }
 
 .video-container:hover {
