@@ -48,8 +48,20 @@ header {
 }
 
 .logo {
-    font-weight: bold;
-    font-size: 20px;
+    /*font-weight: bold;
+    font-size: 20px;*/
+		height: 45px;
+		width: auto;
+		max-width: 150px;
+		display: block;
+}
+.logo img {
+    height: 50px;
+    transition: 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
 }
 
 nav a {
