@@ -318,6 +318,11 @@ footer {
 .portfolio-cta h2 {
     margin-bottom: 20px;
 }
+.portfolio-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
 
 /* CONTACT */
 
