@@ -390,6 +390,28 @@ button {
     cursor: pointer;
 }
 
+.contact-section {
+    padding: 150px 8% 100px;
+    text-align: center;
+}
+
+.contact-logo {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-logo img {
+    height: 80px;
+    opacity: 0.85;
+    transition: 0.3s ease;
+}
+
+.contact-logo img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
 /* SERVICES 
 
 .services-hero {
