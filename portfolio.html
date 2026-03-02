@@ -60,7 +60,10 @@
 <section class="portfolio-section">
 	<h2>Wedding Films</h2>
 	<div class="portfolio-grid">
-		<a href="https://www.youtube.com/watch?v=VIDEO1" target="_blank" class="portfolio-link">
+	
+		<a href="#" class="portfolio-link" 
+			data-video="https://www.youtube.com/embed/YOUR_VIDEO_ID">
+			
 			<div class="portfolio-item">
 					<img src="images/wedding1.jpg" alt="Wedding Film">
 					<div class="overlay">
@@ -70,7 +73,9 @@
 			</div>
 		</a>
 		
-		<a href="https://www.youtube.com/watch?v=VIDEO2" target="_blank" class="portfolio-link">
+		<a href="#" class="portfolio-link" 
+			data-video="https://www.youtube.com/embed/YOUR_VIDEO_ID">
+			
 			<div class="portfolio-item">
 					<img src="images/wedding2.jpg" alt="Wedding Film">
 					<div class="overlay">
@@ -79,6 +84,7 @@
 					</div>
 			</div>
 		</a>
+		
 	</div>
 </section>
 
@@ -86,7 +92,10 @@
 <section class="portfolio-section">
 	<h2>Birthday Films</h2>
 	<div class="portfolio-grid">
-		<a href="https://www.youtube.com/watch?v=VIDEO1" target="_blank" class="portfolio-link">
+	
+		<a href="#" class="portfolio-link" 
+			data-video="https://www.youtube.com/embed/YOUR_VIDEO_ID">
+			
 			<div class="portfolio-item">
 					<img src="images/birthday1.jpg" alt="Birthday Film">
 					<div class="overlay">
@@ -96,7 +105,9 @@
 			</div>
 		</a>
 		
-		<a href="https://www.youtube.com/watch?v=VIDEO1" target="_blank" class="portfolio-link">
+		<a href="#" class="portfolio-link" 
+			data-video="https://www.youtube.com/embed/YOUR_VIDEO_ID">
+			
 			<div class="portfolio-item">
 					<img src="images/birthday2.jpg" alt="Birthday Film">
 					<div class="overlay">
@@ -105,6 +116,7 @@
 					</div>
 			</div>
 		</a>
+		
 	</div>
 </section>
 
@@ -112,7 +124,9 @@
 <section class="portfolio-section">
 	<h2>Brand Shoots</h2>
 	<div class="portfolio-grid">
-		<a href="https://www.youtube.com/watch?v=VIDEO1" target="_blank" class="portfolio-link">
+	
+		<a href="#" class="portfolio-link" 
+			data-video="https://www.youtube.com/embed/YOUR_VIDEO_ID">
 			<div class="portfolio-item">
 					<img src="images/brand1.jpg" alt="Brand Shoot">
 					<div class="overlay">
@@ -122,7 +136,8 @@
 			</div>
 		</a>
 		
-		<a href="https://www.youtube.com/watch?v=VIDEO1" target="_blank" class="portfolio-link">
+		<a href="#" class="portfolio-link" 
+			data-video="https://www.youtube.com/embed/YOUR_VIDEO_ID">
 			<div class="portfolio-item">
 					<img src="images/brand2.jpg" alt="Brand Shoot">
 					<div class="overlay">
@@ -131,6 +146,7 @@
 					</div>
 			</div>
 		</a>
+		
 	</div>
 </section>
 
@@ -138,7 +154,9 @@
 <section class="portfolio-section">
 	<h2>Reels</h2>
 	<div class="portfolio-grid">
-		<a href="https://www.youtube.com/watch?v=VIDEO1" target="_blank" class="portfolio-link">
+	
+		<a href="#" class="portfolio-link" 
+			data-video="https://www.youtube.com/embed/YOUR_VIDEO_ID">
 			<div class="portfolio-item">
 					<img src="images/reel1.jpg" alt="Reel">
 					<div class="overlay">
@@ -148,7 +166,8 @@
 			</div>
 		</a>
 		
-		<a href="https://www.youtube.com/watch?v=VIDEO1" target="_blank" class="portfolio-link">
+		<a href="#" class="portfolio-link" 
+			data-video="https://www.youtube.com/embed/YOUR_VIDEO_ID">
 			<div class="portfolio-item">
 					<img src="images/reel2.jpg" alt="Reel">
 					<div class="overlay">
@@ -157,6 +176,7 @@
 					</div>
 			</div>
 		</a>
+		
 	</div>
 </section>
 
@@ -165,6 +185,42 @@
 	<h2>Let’s Tell Your Story</h2>
 	<a href="contact.html" class="btn">Start a Project</a>
 </section>
+
+<!-- VIDEO MODAL -->
+<div class="video-modal" id="videoModal">
+	<div class="modal-content">
+		<span class="close-modal">&times;</span>
+		<iframe id="modalVideo" src="" frameborder="0" allowfullscreen></iframe>
+	</div>
+</div>
+
+<script>
+const links = document.querySelectorAll('.portfolio-link');
+const modal = document.getElementById('videoModal');
+const modalVideo = document.getElementById('modalVideo');
+const closeBtn = document.querySelector('.close-modal');
+
+links.forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const videoURL = this.getAttribute('data-video');
+        modalVideo.src = videoURL + "?autoplay=1";
+        modal.style.display = "flex";
+    });
+});
+
+closeBtn.addEventListener('click', function() {
+    modal.style.display = "none";
+    modalVideo.src = "";
+});
+
+modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+        modal.style.display = "none";
+        modalVideo.src = "";
+    }
+});
+</script>
 
 <footer>
   <p>© 2026 BOJ Cinematography</p>
