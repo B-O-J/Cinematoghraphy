@@ -17,11 +17,13 @@ body {
     line-height: 1.6;
     background: 
         linear-gradient(rgba(10,10,20,0.85), rgba(5,5,15,0.95)),
-        url('https://images.unsplash.com/photo-1505685296765-3a2736de412f?auto=format&fit=crop&w=1950&q=80');
+        url("images/background 1");
     background-size: cover;
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
     background-position: center;
-}
+		background-repeat: no-repeat;
+		min-height: 100vh;
+}		
 
 /* Optional moving gradient glow */
 body::before {
@@ -66,7 +68,7 @@ nav a:hover {
     /*background: url('hero.jpg') center/cover no-repeat;*/
 		background:
 		linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
-		url('https://images.unsplash.com/photo-1519183071298-a2962e402c8e?auto=format&fit=crop&w=1950&q=80');
+		url("images/background 1");
     background-size: cover;
     background-position: center;
     display: flex;
