@@ -53,7 +53,7 @@ header {
 		max-width: 150px;
 		display: block;
     transition: 0.3s ease;
-		background: transparent;
+		color: white
 }
 
 .logo img:hover {
